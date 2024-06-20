@@ -1,6 +1,6 @@
 # [level 1] 덧칠하기 - 161989 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/161989#) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/161989) 
 
 ### 성능 요약
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 06월 20일 15:47:24
+2024년 06월 20일 15:47:56
 
 ### 문제 설명
 

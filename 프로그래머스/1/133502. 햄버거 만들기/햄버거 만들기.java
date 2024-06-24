@@ -3,20 +3,24 @@ import java.util.*;
 class Solution {
     public int solution(int[] ingredient) {
         int answer = 0;
-        int[] stack = new int[ingredient.length];
-        int num = 0;
+        StringBuilder strIngre = new StringBuilder();
+        StringBuilder ingreKeep = new StringBuilder();
 
         for (int value : ingredient) {
-            stack[num++] = value;
+            strIngre.append(value);
+        }
 
-            if (num >= 4) {
-                if (stack[num-1] == 1 &&
-                        stack[num-2] == 3 &&
-                        stack[num-3] == 2 &&
-                        stack[num-4] == 1) {
-                    answer++;
-                    num -= 4;
-                }
+        while (strIngre.length() > 0) {
+            ingreKeep.append(strIngre.toString().replace("1231", ""));
+            if (strIngre.length()-ingreKeep.length() > 4) {
+                answer = (strIngre.length()-ingreKeep.length())/4;
+            } else if (strIngre.length() != ingreKeep.length()) {
+                answer++;
+                strIngre.setLength(0);
+                strIngre.append(ingreKeep);
+                ingreKeep.setLength(0);
+            }  else if (strIngre.length() == ingreKeep.length()) {
+                break;
             }
         }
 

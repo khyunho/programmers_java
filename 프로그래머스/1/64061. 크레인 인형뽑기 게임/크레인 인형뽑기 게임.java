@@ -20,7 +20,6 @@ class Solution {
                     if (basket.size() > 0 && basket.get(basket.size()-1) == machine[moves[i]-1][j]) {
                         basket.remove(basket.size()-1);
                         answer += 2;
-                        machine[moves[i]-1][j] = 0;
                         break;
                     } else {
                         basket.add(machine[moves[i]-1][j]);

@@ -14,7 +14,6 @@ class Solution {
             for (int j=1; j<=arr[0]; j++){
                 if (arr[1]%j==0 && arr[0]%j==0){
                     num = j;
-                    System.out.println(num);
                 }
             }
             answer = arr[1]*arr[0]/num;
@@ -28,7 +27,6 @@ class Solution {
                 for (int j=1; j<=answer; j++){
                     if (arr[i]%j==0 && answer%j==0){
                         num = j;
-                        System.out.println(num);
                     }
                 }
                 answer = arr[i]*answer/num;
